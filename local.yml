@@ -33,4 +33,5 @@
       - decibels
       - gnome-tour
       - gnome-contacts
+      - gnome-calendar
       state: absent
