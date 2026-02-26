@@ -1,0 +1,6 @@
+# Ignore
+.notes.md
+*.bak
+
+### Ansible ###
+*.retry

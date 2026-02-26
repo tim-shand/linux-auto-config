@@ -1,0 +1,35 @@
+---
+- hosts: all # Target local machine Alt:`all`. 
+  ignore_unreachable: yes # Skip hosts that are not reachable. 
+  connection: local # Instructs Ansible to execute tasks directly on the controller machine, instead of using SSH.
+  become: true # Enables privilege escalation (sudo).
+  gather_facts: true # Collects detailed information about target systems to enable dynamic behavior in playbooks.
+  tags: global # Tags are metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
+  # PRE_TASKS: Execute before any other tasks or roles. 
+  pre_tasks:
+  - name: Prep_Update-Package-Cache_APT
+    tags: global # Metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
+    apt: update_cache=yes
+    when: ansible_distribution in ["Debian", "Ubuntu"] # Only run task when condition is met.
+  - name: Prep_Update-Package-Cache_DNF
+    tags: global # Metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
+    dnf: update_cache=yes
+    when: ansible_distribution in ["Fedora", "Rocky"] # Only run task when condition is met.
+  # TASKS: Main
+  tasks:
+  - name: Packages_Install
+    package:
+      name:
+      - traceroute
+      - git
+      - gh
+      - nano
+      - flatpak
+      state: present
+  - name: Packages_Remove
+    package:
+      name:
+      - showtime
+      - decibels
+      - gnome-tour
+      state: absent
