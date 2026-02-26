@@ -32,4 +32,5 @@
       - showtime
       - decibels
       - gnome-tour
+      - gnome-contacts
       state: absent
