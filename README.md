@@ -1,4 +1,4 @@
-# Bootstrap Linux Configuration
+# Linux Automated Configuration
 
 The purpose of this project is to apply a "Configuration-as-Code" approach to both workstations and servers.  
 Configuration changes, including package installation/removal, are driven by Ansible playbooks, targeting `roles` to assign the required settings.  
