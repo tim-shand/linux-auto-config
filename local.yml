@@ -18,6 +18,7 @@
   # TASKS: Main
   tasks:
   - name: Packages_Install
+    tags: packages, workstation
     package:
       name:
       - traceroute
@@ -27,6 +28,7 @@
       - flatpak
       state: present
   - name: Packages_Remove
+    tags: packages, workstation
     package:
       name:
       - showtime
