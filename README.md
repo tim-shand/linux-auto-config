@@ -9,6 +9,10 @@ Configuration changes, including package installation/removal, are driven by Ans
 - Automates package installation and removals based on pre-defined lists.
 - Configures desktop environment and application settings (workstations).
 
+## Additional Info
+
+[Ansible Roles](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
+
 ## Usage
 
 ```bash
