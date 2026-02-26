@@ -26,6 +26,8 @@
       - gh
       - nano
       - flatpak
+      - azure-cli
+
       state: present
   - name: Packages_Remove
     tags: packages, workstation
@@ -37,3 +39,9 @@
       - gnome-contacts
       - gnome-calendar
       state: absent
+  - name: Script_Repository_Terraform
+    become: true
+    tags: scripts
+    shell: |
+      wget -O- https://rpm.releases.hashicorp.com/fedora/hashicorp.repo | sudo tee /etc/yum.repos.d/hashicorp.repo
+      dnf -y install terraform
