@@ -17,7 +17,7 @@ Configuration changes, including package installation/removal, are driven by Ans
 
 ```bash
 # Execute locally. 
-sudo ansible-playbook local.yaml -i hosts
+sudo ansible-playbook local.yml -i hosts
 
 # Pull from Git repo.
 ansible-pull -U https://github.com/tim-shand/linux-auto-config.git

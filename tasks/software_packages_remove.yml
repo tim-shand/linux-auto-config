@@ -1,0 +1,10 @@
+- name: Packages_Remove
+  tags: packages, workstation
+  package:
+    name:
+    - showtime
+    - decibels
+    - gnome-tour
+    - gnome-contacts
+    - gnome-calendar
+    state: absent

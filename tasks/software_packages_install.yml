@@ -1,0 +1,15 @@
+- name: Packages_Install
+  tags: packages, workstation
+  package:
+    name:
+    - traceroute
+    - git
+    - gh
+    - nano
+    - curl
+    - net-tools
+    - wget
+    - flatpak
+    - azure-cli
+    - terraform
+    state: present

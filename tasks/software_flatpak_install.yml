@@ -1,0 +1,32 @@
+# Add Flatpak remote repository.
+- name: Flatpak_Repo_Remote
+  tags: packages,flatpak,workstation-packages
+  become_user: tim
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+    state: present
+
+# -- Applications -- #
+
+- name: Flatpak_Install_FlatSeal # Flatpak permission manager.
+  become: true
+  flatpak:
+    name: com.github.tchx84.Flatseal
+    state: present
+    remote: flathub
+
+- name: Flatpak_Install_ThinCast # ThinCast RDP client.
+  become: true
+  flatpak:
+    name: com.thincast.client
+    state: present
+    remote: flathub
+
+- name: Flatpak_Install_Draw.io # Draw.io for design diagrams.
+  become: true
+  flatpak:
+    name: com.jgraph.drawio.desktop
+    state: present
+    remote: flathub

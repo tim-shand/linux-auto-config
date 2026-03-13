@@ -1,47 +1,33 @@
 ---
-- hosts: all # Target local machine Alt:`all`. 
+- hosts: localhost # Target local machine Alt:`all`. 
   ignore_unreachable: yes # Skip hosts that are not reachable. 
   connection: local # Instructs Ansible to execute tasks directly on the controller machine, instead of using SSH.
   become: true # Enables privilege escalation (sudo).
   gather_facts: true # Collects detailed information about target systems to enable dynamic behavior in playbooks.
   tags: global # Tags are metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
+
   # PRE_TASKS: Execute before any other tasks or roles. 
   pre_tasks:
+
   - name: Prep_Update-Package-Cache_APT
     tags: global # Metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
     apt: update_cache=yes
     when: ansible_distribution in ["Debian", "Ubuntu"] # Only run task when condition is met.
+
   - name: Prep_Update-Package-Cache_DNF
     tags: global # Metadata applied to selectively run or skip specific tasks, blocks, plays, or roles during execution.
     dnf: update_cache=yes
     when: ansible_distribution in ["Fedora", "Rocky"] # Only run task when condition is met.
-  # TASKS: Main
-  tasks:
-  - name: Packages_Install
-    tags: packages, workstation
-    package:
-      name:
-      - traceroute
-      - git
-      - gh
-      - nano
-      - flatpak
-      - azure-cli
 
-      state: present
-  - name: Packages_Remove
-    tags: packages, workstation
-    package:
-      name:
-      - showtime
-      - decibels
-      - gnome-tour
-      - gnome-contacts
-      - gnome-calendar
-      state: absent
-  - name: Script_Repository_Terraform
-    become: true
-    tags: scripts
-    shell: |
-      wget -O- https://rpm.releases.hashicorp.com/fedora/hashicorp.repo | sudo tee /etc/yum.repos.d/hashicorp.repo
-      dnf -y install terraform
+  tasks:
+
+  - block:
+    # Scripts: Custom
+    - import_tasks: tasks/script_repository_sources.yml
+
+    # Software: Packages
+    - import_tasks: tasks/software_packages_install.yml
+    - import_tasks: tasks/software_packages_remove.yml
+
+    # Software: Flatpak
+    - import_tasks: tasks/software_flatpak_install.yml
