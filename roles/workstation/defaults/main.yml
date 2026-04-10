@@ -1,0 +1,9 @@
+# DEFAULTS --------------------------------------------------- #
+# Defines default values that apply to all systems or can be overridden easily.
+# Lowest in Ansible’s variable precedence.
+
+user: "{{ ansible_user_id }}"
+apps_packages: []
+apps_flatpaks: []
+flatpak_remotes: []
+enable_flatpak: true

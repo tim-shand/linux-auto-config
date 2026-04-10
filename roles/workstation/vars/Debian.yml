@@ -1,0 +1,21 @@
+# VARIABLES --------------------------------------- #
+# Define opinionated, OS-specific values.
+# Use different package names if they differ between OS versions.
+
+package_manager: apt
+apps_packages:
+    - traceroute
+    - git
+    - gh
+    - nano
+    - curl
+    - net-tools
+    - wget
+    - flatpak
+    - azure-cli
+    - terraform
+    - terraform-ls
+    - nmap
+    - virt-manager
+    - wireshark
+    - vlc

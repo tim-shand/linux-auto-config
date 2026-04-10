@@ -1,0 +1,11 @@
+# HANDLERS ----------------------------------------------------- #
+# Handlers run only when notified by tasks.
+
+# Example
+# - name: Restart service
+#   service:
+#     name: ssh
+#     state: restarted
+
+# Triggered By:
+# notify: Restart service

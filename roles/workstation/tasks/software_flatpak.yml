@@ -1,0 +1,30 @@
+# CONFIG ------------------------------------------------- #
+
+# Install Flatpak.
+- name: Flatpak_Enable
+  package:
+      name: flatpak
+      state: present
+
+# Add Flatpak remote sources.
+- name: Flatpak_Remotes
+  become: true
+  become_user: "{{ user }}"
+  flatpak_remote:
+      name: "{{ item.name }}"
+      flatpakrepo_url: "{{ item.url }}"
+      method: user
+      state: present
+  loop: "{{ flatpak_remotes | default([]) }}"
+
+# APPLICATIONS ------------------------------------------------- #
+
+# Install Flatpak applications.
+- name: Flatpak_Apps_Install
+  become: true
+  become_user: "{{ user }}"
+  flatpak:
+      name: "{{ item.name }}"
+      state: present
+      remote: "{{ item.remote | default('flathub') }}"
+  loop: "{{ apps_flatpak }}"

@@ -1,0 +1,16 @@
+# TASKS ------------------------------------------------------------- #
+# Entry point - the starting file when the role runs.
+# Orchestrates everything, keeps logic modular (small files instead of one huge one).
+
+- name: Load_OS_Variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Software_Repo_Config
+  import_tasks: software_repos.yml
+
+- name: Software_Packages
+  import_tasks: software_packages.yml
+
+- name: Software_Flatpak
+  import_tasks: software_flatpak.yml
+  when: enable_flatpak
