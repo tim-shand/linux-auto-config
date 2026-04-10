@@ -1,19 +1,19 @@
 # Linux Automated Configuration
 
-The purpose of this project is to apply a "Configuration-as-Code" approach to both workstations and servers.  
-Configuration changes, including package installation/removal, are driven by Ansible playbooks, targeting `roles` to assign the required settings.  
+The purpose of this project is to apply a "Configuration-as-Code" approach to both workstations and servers.
+Configuration changes, including package installation and removal, are driven by Ansible playbooks, targeting `roles` to assign the required settings to devices.
 
-## Features
+## 💡 Features
 
 - Detects operating system version for use with distribution specific tools/commands.
 - Automates package installation and removals based on pre-defined lists.
 - Configures desktop environment and application settings (workstations).
 
-## Additional Info
+## 📕 Additional Info
 
 [Ansible Roles](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
 
-## Usage
+## ▶️ Usage
 
 ```bash
 # Execute locally. 
