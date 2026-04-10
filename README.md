@@ -9,9 +9,13 @@ Configuration changes, including package installation and removal, are driven by
 - Automates package installation and removals based on pre-defined lists.
 - Configures desktop environment and application settings (workstations).
 
+---
+
 ## 📕 Additional Info
 
 [Ansible Roles](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
+
+---
 
 ## ▶️ Usage
 
@@ -22,3 +26,5 @@ sudo ansible-playbook local.yml -i hosts
 # Pull from Git repo.
 ansible-pull -U https://github.com/tim-shand/linux-auto-config.git
 ```
+
+---
