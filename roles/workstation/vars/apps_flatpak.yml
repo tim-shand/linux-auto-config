@@ -12,3 +12,4 @@ apps_flatpak:
     - com.valvesoftware.Steam # Steam: Game manager
     - com.spotify.Client # Spotify: Music streaming
     - md.obsidian.Obsidian # Obsidian: Note taking app.
+    - org.libreoffice.LibreOffice # Libre Office: Office suit.
