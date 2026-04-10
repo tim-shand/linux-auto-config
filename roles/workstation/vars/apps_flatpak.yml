@@ -11,3 +11,4 @@ apps_flatpak:
     - org.kde.kate # Kate: Code editor
     - com.valvesoftware.Steam # Steam: Game manager
     - com.spotify.Client # Spotify: Music streaming
+    - md.obsidian.Obsidian # Obsidian: Note taking app.
