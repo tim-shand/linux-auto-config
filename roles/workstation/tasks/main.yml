@@ -8,8 +8,8 @@
 - name: Software_Repo_Config
   import_tasks: software_repos.yml
 
-- name: Software_Packages
-  import_tasks: software_packages.yml
+# - name: Software_Packages
+#   import_tasks: software_packages.yml
 
 - name: Software_Flatpak
   import_tasks: software_flatpak.yml
