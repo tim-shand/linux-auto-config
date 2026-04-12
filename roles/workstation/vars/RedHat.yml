@@ -24,3 +24,7 @@ packages_remove:
     - gnome-contacts # Gnome: Default contacts app.
     - showtime # Gnome: Default video player.
     - decibles # Gnome: Default audio player.
+    - libreoffice-calc # LibreOffice: Calc - installed RPM by default.
+    - libreoffice-impress # LibreOffice: Impress - installed RPM by default.
+    - libreoffice-writer # LibreOffice: Writer - installed RPM by default.
+    - yelp # Help: Default install help RPM.
