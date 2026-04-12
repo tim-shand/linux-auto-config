@@ -14,6 +14,7 @@ flatpak_install:
     # System ------------------------------------- #
     - name: com.github.tchx84.Flatseal # FlatSeal: Manage Flatpak permissions
     - name: com.mattjakeman.ExtensionManager # Gnome Extensions.
+    - name: org.gnome.World.PikaBackup # Backup: Pika backup tool.
     # Web Browsers ------------------------------------- #
     - name: org.mozilla.firefox # Web Browser: Firefox
     - name: com.google.Chrome # Web Browser: Chrome
