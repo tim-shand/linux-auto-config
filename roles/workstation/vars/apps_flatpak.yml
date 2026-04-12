@@ -2,7 +2,7 @@ flatpak_remotes:
     - name: flathub
       url: https://flathub.org/repo/flathub.flatpakrepo
 
-apps_flatpaks:
+flatpaks_install:
     # System ------------------------------------- #
     - com.github.tchx84.Flatseal # FlatSeal: Manage Flatpak permissions
     - com.mattjakeman.ExtensionManager # Gnome Extensions.
