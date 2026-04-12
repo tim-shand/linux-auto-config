@@ -12,21 +12,21 @@ flatpak_remotes:
       url: https://flathub.org/repo/flathub.flatpakrepo
 flatpak_install:
     # System ------------------------------------- #
-    - com.github.tchx84.Flatseal # FlatSeal: Manage Flatpak permissions
-    - com.mattjakeman.ExtensionManager # Gnome Extensions.
+    - name: com.github.tchx84.Flatseal # FlatSeal: Manage Flatpak permissions
+    - name: com.mattjakeman.ExtensionManager # Gnome Extensions.
     # Web Browsers ------------------------------------- #
-    - org.mozilla.firefox # Web Browser: Firefox
-    - com.google.Chrome # Web Browser: Chrome
+    - name: org.mozilla.firefox # Web Browser: Firefox
+    - name: com.google.Chrome # Web Browser: Chrome
     # Image Editors ------------------------------------- #
-    - com.jgraph.drawio.desktop # Draw IO: Design diagrams
-    - org.gimp.GIMP # Gimp: Image editor
+    - name: com.jgraph.drawio.desktop # Draw IO: Design diagrams
+    - name: org.gimp.GIMP # Gimp: Image editor
     # Coding ------------------------------------- #
-    - org.kde.kate # Kate: Code
-    - com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code
+    - name: org.kde.kate # Kate: Code
+    - name: com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code
     # RDP Clients ------------------------------------- #
-    - com.thincast.client # ThinCast: RDP client
+    - name: com.thincast.client # ThinCast: RDP client
     # Misc ------------------------------------- #
-    - com.valvesoftware.Steam # Steam: Game manager
-    - com.spotify.Client # Spotify: Music streaming
-    - md.obsidian.Obsidian # Obsidian: Note taking app.
-    - org.libreoffice.LibreOffice # Libre Office: Office suit.
+    - name: com.valvesoftware.Steam # Steam: Game manager
+    - name: com.spotify.Client # Spotify: Music streaming
+    - name: md.obsidian.Obsidian # Obsidian: Note taking app.
+    - name: org.libreoffice.LibreOffice # Libre Office: Office suit.
