@@ -1,14 +1,18 @@
 # CONFIG ------------------------------------------------- #
 
 # Update package cache.
-- name: Update_Package_Cache
+- name: Package_Cache_Update
   package:
       update_cache: yes
 
 # APPLICATIONS ------------------------------------------------- #
 
-# Install system packages.
-- name: Install_Packages
+- name: Packages_Install
   package:
-      name: "{{ apps_packages }}"
+      name: "{{ packages_install }}"
       state: present
+      
+- name: Packages_Remove
+  package:
+      name: "{{ packages_remove }}"
+      state: absent
