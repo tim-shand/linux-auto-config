@@ -7,4 +7,4 @@ packages_install: []
 packages_remove: []
 flatpak_install: []
 flatpak_remotes: []
-enable_flatpak: true
+flatpak_enabled: true
