@@ -13,4 +13,4 @@
 
 - name: Software_Flatpak
   import_tasks: software_flatpak.yml
-  when: enable_flatpak
+  when: flatpak_enabled
