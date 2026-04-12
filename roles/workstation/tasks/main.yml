@@ -6,9 +6,9 @@
   include_vars: "{{ ansible_os_family }}.yml"
 
 - name: Detect_Desktop_Version
-    set_fact:
-        is_gnome: "{{ 'GNOME' in lookup('env', 'XDG_CURRENT_DESKTOP') }}"
-        is_kde: "{{ 'KDE' in lookup('env', 'XDG_CURRENT_DESKTOP') }}"
+  set_fact:
+    is_gnome: "{{ 'GNOME' in lookup('env', 'XDG_CURRENT_DESKTOP') }}"
+    is_kde: "{{ 'KDE' in lookup('env', 'XDG_CURRENT_DESKTOP') }}"
 
 - name: Software_Repo_Config
   import_tasks: software_repos.yml
