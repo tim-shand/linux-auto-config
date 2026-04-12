@@ -3,12 +3,21 @@ flatpak_remotes:
       url: https://flathub.org/repo/flathub.flatpakrepo
 
 apps_flatpak:
+    # System
     - com.github.tchx84.Flatseal # FlatSeal: Manage Flatpak permissions
-    - org.mozilla.firefox # Firefox: Web browser
-    - com.thincast.client # ThinCast: RDP client
+    - com.mattjakeman.ExtensionManager # Gnome Extensions.
+    # Web Browsers
+    - org.mozilla.firefox # Web Browser: Firefox
+    - com.google.Chrome # Web Browser: Chrome
+    # Image Editors
     - com.jgraph.drawio.desktop # Draw IO: Design diagrams
     - org.gimp.GIMP # Gimp: Image editor
-    - org.kde.kate # Kate: Code editor
+    # Coding
+    - org.kde.kate # Kate: Code
+    - com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code
+    # RDP Clients
+    - com.thincast.client # ThinCast: RDP client
+    # Misc
     - com.valvesoftware.Steam # Steam: Game manager
     - com.spotify.Client # Spotify: Music streaming
     - md.obsidian.Obsidian # Obsidian: Note taking app.

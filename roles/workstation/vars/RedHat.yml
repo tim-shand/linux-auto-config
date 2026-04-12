@@ -11,7 +11,6 @@ apps_packages:
     - curl
     - net-tools
     - wget
-    - flatpak
     - azure-cli
     - terraform
     - terraform-ls
