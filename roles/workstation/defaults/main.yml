@@ -3,7 +3,8 @@
 # Lowest in Ansible’s variable precedence.
 
 user: "{{ ansible_user_id }}"
-apps_packages: []
-apps_flatpaks: []
+packages_install: []
+packages_remove: []
+flatpak_install: []
 flatpak_remotes: []
 enable_flatpak: true
