@@ -24,7 +24,7 @@ flatpak_install:
     - name: org.kde.kate # Kate: Code
     - name: com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code
     # RDP Clients ------------------------------------- #
-    - name: com.thincast.client # ThinCast: RDP client
+    #- name: com.thincast.client # ThinCast: RDP client # Disabled in favour of 'freerdp' package.
     # Misc ------------------------------------- #
     - name: com.valvesoftware.Steam # Steam: Game manager
     - name: com.spotify.Client # Spotify: Music streaming
