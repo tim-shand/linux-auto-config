@@ -3,7 +3,7 @@
 # Use different package names if they differ between OS versions.
 
 package_manager: dnf
-apps_packages:
+packages_install:
     - traceroute
     - git
     - gh
@@ -19,3 +19,8 @@ apps_packages:
     - wireshark
     - vlc
     - freerdp
+packages_remove:
+    - gnome-tour # Gnome: Default tour app.
+    - gnome-contacts # Gnome: Default contacts app.
+    - showtime # Gnome: Default video player.
+    - decibles # Gnome: Default audio player.
