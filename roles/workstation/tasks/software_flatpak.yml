@@ -27,4 +27,4 @@
       name: "{{ item.name }}"
       state: present
       remote: "{{ item.remote | default('flathub') }}"
-  loop: "{{ flatpaks_install }}"
+  loop: "{{ flatpak_install }}"
