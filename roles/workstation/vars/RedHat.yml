@@ -18,3 +18,4 @@ apps_packages:
     - virt-manager
     - wireshark
     - vlc
+    - freerdp3-wayland
