@@ -23,7 +23,7 @@ flatpak_install:
     - name: org.gimp.GIMP # Gimp: Image editor
     # Coding ------------------------------------- #
     - name: org.kde.kate # Kate: Code
-    - name: com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code
+    - name: com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code # host-spawn
     # RDP Clients ------------------------------------- #
     #- name: com.thincast.client # ThinCast: RDP client # Disabled in favour of 'freerdp' package.
     # Misc ------------------------------------- #
