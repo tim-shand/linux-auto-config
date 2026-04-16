@@ -3,16 +3,22 @@
 # Update package cache.
 - name: Package_Cache_Update
   package:
-      update_cache: yes
+    update_cache: yes
 
 # APPLICATIONS ------------------------------------------------- #
 
 - name: Packages_Install
   package:
-      name: "{{ packages_install }}"
-      state: present
-      
+    name: "{{ packages_install }}"
+    state: present
+
 - name: Packages_Remove
   package:
-      name: "{{ packages_remove }}"
-      state: absent
+    name: "{{ packages_remove }}"
+    state: absent
+
+- name: Packages_Remove_Gnome
+  package:
+    name: "{{ packages_remove_gnome }}"
+    state: absent
+  when: is_gnome # Only run on desktops using Gnome.

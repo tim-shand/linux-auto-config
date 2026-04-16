@@ -4,7 +4,17 @@
 
 user: "{{ ansible_user_id }}"
 packages_install: [] # Define is case OS file definition is empty.
-packages_remove: [] # Define is case OS file definition is empty.
+packages_remove: # Define is case OS file definition is empty.
+    - libreoffice-emailmerge # LibreOffice: Dependant package for Writer.
+    - libreoffice-calc # LibreOffice: Calc - installed RPM by default.
+    - libreoffice-impress # LibreOffice: Impress - installed RPM by default.
+    - libreoffice-writer # LibreOffice: Writer - installed RPM by default.
+
+packages_remove_gnome:
+    - gnome-tour # Gnome: Default tour app.
+    - gnome-contacts # Gnome: Default contacts app.
+    - showtime # Gnome: Default video player (replaced by VLC).
+    - decibels # Gnome: Default audio player (replaced by VLC).
 
 flatpak_enabled: true
 flatpak_remotes:

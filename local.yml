@@ -1,5 +1,5 @@
 ---
-- hosts: workstations # Target local machine Alt:`all`.
+- hosts: localhost #workstations # Target local machine Alt:`all`.
   ignore_unreachable: yes # Skip hosts that are not reachable.
   connection: local # Instructs Ansible to execute tasks directly on the controller machine, instead of using SSH.
   become: true # Enables privilege escalation (sudo).
@@ -7,6 +7,6 @@
 
   # ROLES:
   roles:
-      - role: workstation
-        vars:
-            user: tim
+    - role: workstation
+      vars:
+        user: tim
