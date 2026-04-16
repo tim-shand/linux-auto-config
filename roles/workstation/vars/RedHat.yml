@@ -19,6 +19,7 @@ packages_install:
     - wireshark
     - vlc
     - freerdp
+    - powershell # Requires script to add repo.
 packages_remove:
     - gnome-tour # Gnome: Default tour app.
     - gnome-contacts # Gnome: Default contacts app.

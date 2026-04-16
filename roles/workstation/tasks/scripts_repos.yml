@@ -8,14 +8,22 @@
   become: true
   tags: scripts
   shell: |
-      sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
-      wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+    apt-get update && sudo apt-get install -y gnupg software-properties-common
+    wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
   when: ansible_os_family == "Debian" # Only run on OS family distributions and flavours.
 
 - name: Script_Repository_Terraform_DNF
   become: true
   tags: scripts
   shell: |
-      dnf install -y dnf-plugins-core
-      dnf config-manager addrepo --from-repofile=https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+    dnf install -y dnf-plugins-core
+    dnf config-manager addrepo --from-repofile=https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+  when: ansible_os_family == "RedHat" # Only run on OS family distributions and flavours.
+
+- name: Script_Repository_Microsoft
+  become: true
+  tags: scripts
+  shell: |
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
   when: ansible_os_family == "RedHat" # Only run on OS family distributions and flavours.
