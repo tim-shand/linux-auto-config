@@ -24,6 +24,6 @@
   become: true
   tags: scripts
   shell: |
-    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    rpm --import https://packages.microsoft.com/keys/microsoft.asc
     curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
   when: ansible_os_family == "RedHat" # Only run on OS family distributions and flavours.
