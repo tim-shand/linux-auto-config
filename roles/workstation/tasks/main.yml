@@ -11,7 +11,7 @@
     is_kde: "{{ 'KDE' in lookup('env', 'XDG_CURRENT_DESKTOP') }}"
 
 - name: Software_Repo_Config
-  import_tasks: scripts_repos.yml
+  import_tasks: software_repos.yml
 
 - name: Software_Packages
   import_tasks: software_packages.yml
