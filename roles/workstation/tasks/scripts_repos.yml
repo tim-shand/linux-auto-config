@@ -20,16 +20,16 @@
 #     dnf config-manager addrepo --from-repofile=https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 #   when: ansible_os_family == "RedHat" # Only run on OS family distributions and flavours.
 
-- name: Add Hashicorp Repository (Fedora)
+- name: Add Hashicorp repository (RedHat/Fedora)
   become: true
-  dnf_repository:
+  ansible.builtin.yum_repository:
     name: hashicorp
     description: Hashicorp Repository
     baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
     gpgcheck: yes
     gpgkey: https://rpm.releases.hashicorp.com/gpg
     state: present
-  when: ansible_os_family == "RedHat" # Only run on OS family distributions and flavours.
+  when: ansible_os_family == "RedHat"
 
 - name: Script_Repository_Microsoft
   become: true
