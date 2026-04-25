@@ -20,3 +20,4 @@ packages_install:
     - vlc
     - freerdp
     - powershell # Requires script to add repo.
+    - waydroid

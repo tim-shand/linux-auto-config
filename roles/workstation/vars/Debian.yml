@@ -19,3 +19,4 @@ packages_install:
     - wireshark
     - vlc
     - freerdp3-wayland
+    - waydroid
