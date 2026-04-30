@@ -21,3 +21,5 @@ packages_install:
     - freerdp
     - powershell # Requires script to add repo.
     - waydroid
+    - steam
+    - steam-devices
