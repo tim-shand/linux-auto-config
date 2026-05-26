@@ -19,4 +19,6 @@ packages_install:
     - wireshark
     - vlc
     - freerdp3-wayland
+    - powershell # Requires script to add repo.
     - waydroid
+    - hugo

@@ -10,13 +10,11 @@ packages_remove:
     - libreoffice-calc # LibreOffice: Calc - installed RPM by default.
     - libreoffice-impress # LibreOffice: Impress - installed RPM by default.
     - libreoffice-writer # LibreOffice: Writer - installed RPM by default.
-
 packages_remove_gnome:
     - gnome-tour # Gnome: Default tour app.
     - gnome-contacts # Gnome: Default contacts app.
     - showtime # Gnome: Default video player (replaced by VLC).
     - decibels # Gnome: Default audio player (replaced by VLC).
-
 flatpak_enabled: true
 flatpak_remotes:
     - name: flathub
@@ -28,17 +26,23 @@ flatpak_install:
     - name: org.gnome.World.PikaBackup # Backup: Pika backup tool.
     # Web Browsers ------------------------------------- #
     - name: org.mozilla.firefox # Web Browser: Firefox
-    - name: com.google.Chrome # Web Browser: Chrome
+    #- name: com.google.Chrome # Web Browser: Google Chrome
+    - name: org.chromium.Chromium # Web Browser: Chromium
+    # Productivity / Office ------------------------------------- #
+    - name: md.obsidian.Obsidian # Obsidian: Note taking app.
+    - name: org.libreoffice.LibreOffice # Libre Office: Office suit.
     # Image Editors ------------------------------------- #
     - name: com.jgraph.drawio.desktop # Draw IO: Design diagrams
     - name: org.gimp.GIMP # Gimp: Image editor
+    - name: be.alexandervanhee.gradia # Gradia: Screenshot markup tool.
+    - name: com.github.PintaProject.Pinta # Pinta: Image editor (no step tool).
+    - name: org.ksnip.ksnip # Ksnip: Screenshot markup tool (no step tool, but has better features than Gradia).
     # Coding ------------------------------------- #
     #- name: org.kde.kate # Kate: Code
     - name: com.visualstudio.code # Visual Studio Code: https://github.com/flathub/com.visualstudio.code # host-spawn
-    # RDP Clients ------------------------------------- #
-    #- name: com.thincast.client # ThinCast: RDP client # Disabled in favour of 'freerdp' package.
+    # Media ------------------------------------- #
+    - name: org.videolan.VLC # VLC: Media player
+    - name: org.freedesktop.Platform.ffmpeg-full # VLC dependency for codecs.
+    - name: com.spotify.Client # Spotify: Music streaming.
     # Misc ------------------------------------- #
     #- name: com.valvesoftware.Steam # Steam: Game manager # Favour repo version.
-    - name: com.spotify.Client # Spotify: Music streaming
-    - name: md.obsidian.Obsidian # Obsidian: Note taking app.
-    - name: org.libreoffice.LibreOffice # Libre Office: Office suit.
